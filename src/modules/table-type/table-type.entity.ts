@@ -10,9 +10,7 @@ export class TableTypeEntity extends BaseEntity {
     @Column({ type: 'varchar', length: 30 })
     name: string
 
-    @OneToMany( type => TableStructureEntity, structure => structure.tableTypeR, {
-        eager: true
-    })
+    @OneToMany( type => TableStructureEntity, structure => structure.tableTypeR)
     columns: TableStructureEntity[];
     
 }

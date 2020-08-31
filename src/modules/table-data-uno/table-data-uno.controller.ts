@@ -24,7 +24,7 @@ export class TableDataUnoController {
 
     @Delete(':id')
     deleteTableDataUno(@Param() params): any {
-        return this._tableDataUnoService.deleteTableDataUno(params.id)
+        return this._tableDataUnoService.deleteTableDataUno(params.id);
     }
 
 }

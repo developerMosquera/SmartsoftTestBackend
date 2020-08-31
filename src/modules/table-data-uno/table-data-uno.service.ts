@@ -7,24 +7,24 @@ export class TableDataUnoService {
 
     constructor (
         @InjectRepository(TableDataUnoRepository)
-        private readonly _TableDataUnoRepository: TableDataUnoRepository) { }
+        private readonly _tableDataUnoRepository: TableDataUnoRepository) { }
 
     async saveTableDataUno(data: any) {
-        await this._TableDataUnoRepository.insert(data);
+        await this._tableDataUnoRepository.insert(data);
         return data;
     }
 
     async updateTableDataUno(id: number, data: any) {
-        await this._TableDataUnoRepository.update(id, data);
+        await this._tableDataUnoRepository.update(id, data);
         return data;
     }
 
     async findAllTableDataUno() {
-        return await this._TableDataUnoRepository.find();
+        return await this._tableDataUnoRepository.find();
     }
 
     async deleteTableDataUno(id: number) {
-        return await this._TableDataUnoRepository.delete(id);
+        return await this._tableDataUnoRepository.delete(id);
     }
 
 }

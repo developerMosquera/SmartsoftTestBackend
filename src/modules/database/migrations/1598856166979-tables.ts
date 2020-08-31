@@ -1,10 +1,10 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class tables1598803765399 implements MigrationInterface {
-    name = 'tables1598803765399'
+export class tables1598856166979 implements MigrationInterface {
+    name = 'tables1598856166979'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.query("CREATE TABLE `tableDataDos` (`id` int NOT NULL AUTO_INCREMENT, `T2C1` int NOT NULL, `T2C2` varchar(50) NOT NULL, `T2C3` int NOT NULL, `T2C4` datetime NOT NULL, `T2C5` int NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
+        await queryRunner.query("CREATE TABLE `tableDataDos` (`id` int NOT NULL AUTO_INCREMENT, `T2C1` varchar(255) NOT NULL, `T2C2` varchar(50) NOT NULL, `T2C3` int NOT NULL, `T2C4` datetime NOT NULL, `T2C5` int NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("CREATE TABLE `tableDataTres` (`id` int NOT NULL AUTO_INCREMENT, `T3C1` int NOT NULL, `T3C2` varchar(50) NOT NULL, `T3C3` datetime NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("CREATE TABLE `tableDataUno` (`id` int NOT NULL AUTO_INCREMENT, `T1C1` int NOT NULL, `T1C2` varchar(50) NOT NULL, `T1C3` int NOT NULL, `T1C4` datetime NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");
         await queryRunner.query("CREATE TABLE `tableType` (`id` int NOT NULL AUTO_INCREMENT, `name` varchar(30) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB");

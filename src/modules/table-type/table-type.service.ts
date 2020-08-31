@@ -20,6 +20,11 @@ export class TableTypeService {
     }
 
     async getFindOneTableType(id: number) {
-        return await this._tableTypeRepository.findOne({ id: id });
+        return await this._tableTypeRepository.createQueryBuilder('tableType')
+            .leftJoinAndSelect('tableType.columns', 'structure')
+            .where('tableType.id = :id', { id: id })
+            .getOne();
+
+        
     }
 }
